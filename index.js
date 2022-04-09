@@ -10,6 +10,8 @@ import figlet from 'figlet';
 import { createSpinner } from 'nanospinner';
 
 let playerName;
+let playerScore = 0;
+let totalScore = 10;
 
 const sleep = (ms = 1000) => new Promise((r) => setTimeout(r, ms));
 
@@ -33,9 +35,16 @@ async function handleAnswer(isCorrect) {
   await sleep();
 
   if (isCorrect) {
+    playerScore += 1;
     spinner.success({ text: `Отлично ${playerName}. Это правильный ответ` });
+    console.log(chalk.yellow(`Правильных ответов: ${playerScore} / ${totalScore} 🎉\n`));
   } else {
     spinner.error({ text: `Ответ неверный, ты проиграл ${playerName}!` });
+    console.log(
+      chalk.bgRed(
+        chalk.yellow(`Правильных ответов ${playerScore} из ${totalScore}`)
+      )
+    );
     process.exit(1);
   }
 }
