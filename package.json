@@ -1,11 +1,11 @@
 {
   "name": "solarsystemquiz",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Solar System CLI Quiz",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nekrasovp/solarsystemquiz"
+    "url": "https://github.com/nekrasovp/SolarQuiz"
   },
   "main": "index.js",
   "scripts": {
