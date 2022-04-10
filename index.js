@@ -6,7 +6,6 @@ import chalk from 'chalk';
 import inquirer from 'inquirer';
 import gradient from 'gradient-string';
 import chalkAnimation from 'chalk-animation';
-import figlet from 'figlet';
 import { createSpinner } from 'nanospinner';
 
 let playerName;
@@ -61,10 +60,9 @@ async function askName() {
 
 function winner() {
   console.clear();
-  figlet(`Поздравляю , ${playerName} !\n Юра тобой бы гордился!`, (err, data) => {
-    console.log(gradient.pastel.multiline(data) + '\n');
-    process.exit(0);
-  });
+  const data = `Поздравляю, ${playerName}!\nЮра тобой бы гордился!`
+  console.log(gradient.pastel.multiline(data));
+  process.exit(0);
 }
 
 async function question1() {
@@ -181,13 +179,13 @@ console.clear();
 await welcome();
 await askName();
 await question1();
-await question2();
-await question3();
-await question4();
-await question5();
-await question6();
-await question7();
-await question8();
-await question9();
-await question10();
+// await question2();
+// await question3();
+// await question4();
+// await question5();
+// await question6();
+// await question7();
+// await question8();
+// await question9();
+// await question10();
 winner();
