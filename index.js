@@ -100,7 +100,7 @@ async function question3() {
             'Между Землей и Марсом'
         ],
     });
-  return handleAnswer(answers.question_3 === 'undefined');
+  return handleAnswer(answers.question_3 === 'Между Марсом и Юпитером');
 }
 
 async function question4() {
